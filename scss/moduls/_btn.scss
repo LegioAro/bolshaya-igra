@@ -1,0 +1,19 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: var(--font-text-3);
+  padding: 20px;
+  background-color: #f2ff5e;
+  cursor: pointer;
+  border: 0;
+
+  color: rgb(10, 10, 11);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+}
