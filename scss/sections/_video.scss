@@ -1,10 +1,26 @@
 .video {
   margin-bottom: 289px;
+  position: relative;
+
+  &__dec {
+    position: absolute;
+    width: 100%;
+    height: 1192px;
+    left: 0;
+    top: 227px;
+    pointer-events: none;
+    background-image: url(../img/decor/dec1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
   &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
+    z-index: 1;
   }
 
   &__title {
