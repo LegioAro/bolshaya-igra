@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="./css/intlTelInput.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Большая игра в ИнфоБизнесе</title>
   </head>
@@ -35,7 +36,9 @@
                 или как продавать экспертность <span>от 10&nbsp;000&nbsp;$$$</span> каждый месяц
               </div>
               <div class="cover__btn-wrapper">
-                <button class="cover__btn btn">Регистрация Открыта</button>
+                <button class="cover__btn btn" data-scroll-smooth="packets">
+                  Регистрация Открыта
+                </button>
                 <div class="cover__date">
                   <div class="cover__date-img"><img src="./img/icons/calendar.svg" alt="" /></div>
                   <p>Старт 1 сентября</p>
@@ -69,7 +72,7 @@
             <div class="video__info-img"><img src="./img/video/info.svg" alt="" /></div>
           </div>
           <div class="video__img"><img src="./img/video/img.png" alt="" /></div>
-          <button class="video__btn btn">Принять Участие</button>
+          <button class="video__btn btn" data-scroll-smooth="packets">Принять Участие</button>
         </div>
       </div>
     </section>
@@ -457,7 +460,7 @@
       </div>
     </section>
 
-    <section class="packets">
+    <section class="packets" id="packets">
       <div class="packets__dec"><img src="./img/decor/dec3.png" alt="" /></div>
 
       <div class="container">
@@ -527,7 +530,12 @@
               <div class="packets__item-info">
                 <div class="packets__item-info-text">Обычная Цена: <span>1000$</span></div>
                 <div class="packets__item-info-title">Цена сейчас: <span>500$</span></div>
-                <button class="packets__item-info-btn btn">Принять Участие</button>
+                <button
+                  class="packets__item-info-btn btn modal__btn-active"
+                  data-modal-src="modal-1"
+                >
+                  Принять Участие
+                </button>
               </div>
             </div>
             <div class="packets__item">
@@ -552,7 +560,12 @@
               <div class="packets__item-info">
                 <div class="packets__item-info-text">Обычная Цена: <span>3600$</span></div>
                 <div class="packets__item-info-title">Цена сейчас: <span>1800$</span></div>
-                <button class="packets__item-info-btn btn">Принять Участие</button>
+                <button
+                  class="packets__item-info-btn btn modal__btn-active"
+                  data-modal-src="modal-2"
+                >
+                  Принять Участие
+                </button>
               </div>
             </div>
           </div>
@@ -571,6 +584,111 @@
       </div>
     </footer>
 
+    <!-- ============== -->
+    <!-- modals -->
+    <!-- ============== -->
+    <div class="modal__wrapper" data-modal-window="modal-1">
+      <div class="modal__content">
+        <div class="modal__btn-close">
+          <span class="icon-close"></span>
+        </div>
+        <form id="form" class="form form-send" action="" method="post">
+          <div class="form__title">Заполните форму ниже, чтобы принять участие в программе</div>
+          <div class="form__inputs">
+            <div class="form__input-block">
+              <input type="hidden" value="" name="country-code" id="country-code" />
+              <input
+                type="text"
+                required
+                placeholder="Введите ваше имя"
+                name="name"
+                value=""
+                class="form__input val val-name"
+              />
+              <div class="form__input-text">Не правильно введено Имя</div>
+            </div>
+            <div class="form__input-block">
+              <input
+                type="email"
+                required
+                placeholder="Введите ваш Email"
+                name="email"
+                value=""
+                class="form__input val val-email"
+              />
+              <div class="form__input-text">Не правильно введен email</div>
+            </div>
+            <div class="form__input-block">
+              <input
+                type="tel"
+                required
+                placeholder=""
+                name="phone"
+                value=""
+                class="form__input phone"
+                id="phone"
+              />
+              <div class="form__input-text error-msg" id="error-msg"></div>
+            </div>
+          </div>
+
+          <div class="form__btn"><button class="btn">Принять Участие</button></div>
+        </form>
+      </div>
+    </div>
+    <div class="modal__wrapper" data-modal-window="modal-2">
+      <div class="modal__content">
+        <div class="modal__btn-close">
+          <span class="icon-close"></span>
+        </div>
+        <form id="form" class="form form-send" action="" method="post">
+          <div class="form__title">Заполните форму ниже, чтобы принять участие в программе</div>
+          <div class="form__inputs">
+            <div class="form__input-block">
+              <input type="hidden" value="" name="country-code" id="country-code" />
+              <input
+                type="text"
+                required
+                placeholder="Введите ваше имя"
+                name="name"
+                value=""
+                class="form__input val val-name"
+              />
+              <div class="form__input-text">Не правильно введено Имя</div>
+            </div>
+            <div class="form__input-block">
+              <input
+                type="email"
+                required
+                placeholder="Введите ваш Email"
+                name="email"
+                value=""
+                class="form__input val val-email"
+              />
+              <div class="form__input-text">Не правильно введен email</div>
+            </div>
+            <div class="form__input-block">
+              <input
+                type="tel"
+                required
+                placeholder=""
+                name="phone"
+                value=""
+                class="form__input phone"
+                id="phone"
+              />
+              <div class="form__input-text error-msg" id="error-msg"></div>
+            </div>
+          </div>
+
+          <div class="form__btn"><button class="btn">Принять Участие</button></div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/intlTelInput.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/form-validation.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

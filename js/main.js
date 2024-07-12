@@ -99,3 +99,58 @@ function isTimer() {
 }
 
 isTimer();
+
+//Modal
+function isModal() {
+  let modalBtns = document.querySelectorAll('.modal__btn-active');
+
+  if (modalBtns.length > 0) {
+    for (let modalBtn of modalBtns) {
+      modalBtn.addEventListener('click', function () {
+        let modalBtnData = modalBtn.getAttribute('data-modal-src');
+        let modalWindow = document.querySelector(`*[data-modal-window="${modalBtnData}"]`);
+        let body = document.querySelector('body');
+
+        if (modalWindow) {
+          modalWindow.classList.add('active');
+          body.classList.add('lock');
+        }
+      });
+    }
+  }
+}
+isModal();
+
+function isModalClose() {
+  let modalCloseBtns = document.querySelectorAll('.modal__btn-close');
+  if (modalCloseBtns.length > 0) {
+    for (let modalCloseBtn of modalCloseBtns) {
+      modalCloseBtn.addEventListener('click', function () {
+        let modalWindow = modalCloseBtn.closest('*[data-modal-window]');
+        let body = document.querySelector('body');
+
+        modalWindow.classList.remove('active');
+        body.classList.remove('lock');
+      });
+    }
+  }
+}
+isModalClose();
+
+//smooth
+
+const scrollSmoothLinck = document.querySelectorAll('*[data-scroll-smooth]');
+
+for (let elem of scrollSmoothLinck) {
+  elem.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    let blockID = elem.getAttribute('data-scroll-smooth');
+    let top = document.getElementById(blockID).getBoundingClientRect().top;
+
+    document.querySelector('html,body').scrollTo({
+      top: top + window.pageYOffset - 30,
+      behavior: 'smooth',
+    });
+  });
+}
