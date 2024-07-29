@@ -1,7 +1,17 @@
 .footer {
   padding: 37px 0;
-  background-color: #161718;
+  position: relative;
+
+  &__decore {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    object-fit: contain;
+  }
   &__wrapper {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,6 +22,9 @@
     line-height: 145%;
     letter-spacing: 0%;
     text-align: center;
+
+    position: relative;
+    z-index: 1;
   }
 
   &__title {
@@ -23,6 +36,14 @@
 
   &__link {
     text-decoration: underline;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    &__decore {
+      height: 1000px;
+    }
   }
 }
 

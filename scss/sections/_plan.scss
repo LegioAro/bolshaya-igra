@@ -1,0 +1,157 @@
+.plan {
+  margin-bottom: 323px;
+  position: relative;
+  &__decore {
+    position: absolute;
+    width: 100%;
+    max-width: 1920px;
+    left: 50%;
+    top: -222px;
+    transform: translateX(-50%);
+    display: flex;
+    object-fit: contain;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    text-align: right;
+    margin-right: 60px;
+  }
+
+  &__title-text {
+    width: 100%;
+    max-width: 418px;
+
+    p {
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 145%;
+      letter-spacing: 0%;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    margin-bottom: 80px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-end;
+
+    margin-right: 44px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__item-num {
+    color: rgb(var(--color-1));
+    font-size: 70.75px;
+    font-weight: 700;
+    line-height: 90%;
+    letter-spacing: 0%;
+    margin-right: 18px;
+    text-transform: uppercase;
+  }
+
+  &__item-text {
+    font-size: 17.76px;
+    font-weight: 600;
+    line-height: 145%;
+    letter-spacing: 0%;
+  }
+
+  &__info {
+    text-align: center;
+    border-radius: 10.09px;
+    margin-bottom: 54px;
+    background: linear-gradient(
+      42deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(10, 10, 11, 1) 50%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+
+    padding: 0.5px;
+
+    p {
+      border-radius: 10.09px;
+      padding: 20px 40px;
+      background: rgb(22, 23, 24);
+    }
+  }
+
+  &__btn {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .plan {
+    margin-bottom: 200px;
+    &__item-num {
+      font-size: 60px;
+    }
+    &__item-text {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .plan {
+    margin-bottom: 100px;
+    &__item {
+      margin-right: 30px;
+    }
+    &__item-num {
+      font-size: 50px;
+      margin-right: 10px;
+    }
+    &__item-text {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .plan {
+    &__title-block {
+      margin-bottom: 50px;
+      flex-direction: column;
+    }
+    &__title {
+      text-align: center;
+      margin-bottom: 30px;
+      margin-right: 0;
+    }
+    &__title-text {
+      text-align: center;
+    }
+    &__items {
+      flex-direction: column;
+      margin-bottom: 50px;
+    }
+    &__item {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
