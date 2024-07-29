@@ -29,7 +29,7 @@ isTabs();
 
 function isTimer() {
   // let dateNow = new Date();
-  let minutesDeadline = new Date(2024, 6, 12, 20);
+  let minutesDeadline = new Date(2024, 6, 30, 20);
 
   // dateNow.setMinutes(dateNow.getMinutes() + minutesDeadline);
 
@@ -57,7 +57,7 @@ function isTimer() {
       let timerMilSecondsItems = timerMilSeconds.querySelectorAll('.timer__item-num');
 
       // const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
-      const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
+      const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) : 0;
       const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
       const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
       const milSeconds = diff > 0 ? Math.floor(diff) % 100 : 0;
@@ -95,7 +95,7 @@ function isTimer() {
   // вызываем функцию countdownTimer
   countdownTimer();
   // вызываем функцию countdownTimer каждую секунду
-  timerId = setInterval(countdownTimer, 100);
+  timerId = setInterval(countdownTimer, 80);
 }
 
 isTimer();
