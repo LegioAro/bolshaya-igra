@@ -32,6 +32,7 @@
   }
 
   &__title {
+    @include text-gradient;
     color: rgb(255, 255, 255);
     font-size: 62.2px;
     font-weight: 700;
@@ -42,7 +43,7 @@
   }
 
   &__text {
-    font-size: 17.77px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 145%;
     letter-spacing: 0%;
@@ -123,7 +124,7 @@
     position: relative;
     margin-bottom: 48px;
     li {
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 400;
       line-height: 145%;
       letter-spacing: 0%;
@@ -145,7 +146,7 @@
   }
 
   &__item-info-text {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 145%;
     letter-spacing: 0%;
@@ -205,11 +206,6 @@
 @media (max-width: 768px) {
   .packets {
     margin-bottom: 70px;
-  }
-}
-
-@media (max-width: 700px) {
-  .packets {
     &__items {
       grid-template-columns: repeat(1, 1fr);
       grid-row-gap: 50px;

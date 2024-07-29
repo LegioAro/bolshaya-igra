@@ -36,7 +36,7 @@
   &__text {
     width: 100%;
     max-width: 590px;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 145%;
     letter-spacing: 0%;
@@ -83,6 +83,22 @@
     max-width: 294px;
     width: 100%;
     margin-right: 20px;
+    position: relative;
+  }
+
+  &__info-img-border {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__info-img-gif {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border-radius: 30px;
   }
 
   &__info-content {
@@ -112,7 +128,7 @@
 
   &__info-item-title {
     color: rgb(230, 230, 230);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 145%;
     letter-spacing: 0%;
@@ -125,6 +141,72 @@
     line-height: 145%;
     letter-spacing: 0%;
     text-transform: uppercase;
+  }
+
+  &__slider-wrapper {
+    width: 100%;
+    max-width: 584px;
+  }
+
+  &__slider {
+    overflow: hidden;
+    margin-bottom: 50px;
+    display: flex;
+  }
+
+  &__slider-item {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    overflow: hidden;
+    border-radius: 18.75px;
+  }
+
+  &__slider-arrows {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 152px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__slider-arrow {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    cursor: pointer;
+
+    svg {
+      circle,
+      path {
+        transition: 0.3s;
+      }
+    }
+
+    &:hover {
+      svg {
+        circle,
+        path {
+          stroke: rgb(var(--color-1));
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .why {
+    &__info {
+      &-2 {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 auto;
+        max-width: fit-content;
+
+        .why__info-content {
+          margin-bottom: 30px;
+        }
+      }
+    }
   }
 }
 
@@ -175,11 +257,6 @@
   .why {
     &__info {
       flex-direction: column;
-
-      &-2 {
-        flex-direction: column-reverse;
-        align-items: flex-start;
-      }
     }
     &__info-img {
       margin-right: 0;

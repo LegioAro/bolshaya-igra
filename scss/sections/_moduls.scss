@@ -15,6 +15,7 @@
   }
 
   &__title {
+    @include text-gradient;
     color: rgb(255, 255, 255);
     font-size: 70px;
     font-weight: 700;
@@ -79,7 +80,7 @@
   }
 
   &__tabs-btn-title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 145%;
     letter-spacing: 0%;
@@ -108,7 +109,7 @@
 
     p,
     li {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600;
       line-height: 145%;
       letter-spacing: 0%;
@@ -188,10 +189,10 @@
       font-size: 20px;
     }
     &__tabs-btn-title {
-      font-size: 14px;
+      font-size: 18px;
     }
     &__tabs-btn-text {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 }
@@ -203,7 +204,7 @@
       font-size: 50px;
     }
     &__text {
-      font-size: 16px;
+      font-size: 18px;
       margin-bottom: 50px;
     }
     &__tabs {
@@ -223,7 +224,7 @@
     &__tabs-content-item {
       p,
       li {
-        font-size: 14px;
+        font-size: 18px;
       }
     }
     &__tabs-content-elem {

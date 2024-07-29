@@ -27,7 +27,7 @@
     max-width: 292px;
     margin: 0 auto;
     span {
-      font-size: 13px;
+      font-size: 18px;
       margin-right: 20px;
 
       &::before {
@@ -35,7 +35,7 @@
       }
     }
     p {
-      font-size: 12px;
+      font-size: 18px;
       line-height: 120%;
       color: #ffffff;
     }
@@ -61,7 +61,7 @@
   &__input {
     font-family: var(--font-text);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 112%;
     width: 100%;
     background-color: #ffffff;
@@ -79,7 +79,7 @@
     &::placeholder {
       font-family: var(--font-text);
       font-weight: 600;
-      font-size: 16;
+      font-size: 18px;
       line-height: 112%;
       color: #201c1c;
     }
@@ -94,7 +94,7 @@
 
   &__input-text {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 120%;
     color: #f0a190;
     text-align: left;
@@ -133,7 +133,7 @@
     }
 
     p {
-      font-size: 12px;
+      font-size: 18px;
       line-height: 120%;
       color: #ffffff;
       text-align: left;
@@ -153,7 +153,7 @@
 
       p {
         color: rgba(239, 239, 239, 0.7);
-        font-size: 12px;
+        font-size: 18px;
         font-weight: 400;
         line-height: 120%;
       }

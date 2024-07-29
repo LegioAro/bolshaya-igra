@@ -154,3 +154,13 @@ for (let elem of scrollSmoothLinck) {
     });
   });
 }
+
+const swiper = new Swiper('.why__slider', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+
+  navigation: {
+    nextEl: '.why__slider-arrow-r',
+    prevEl: '.why__slider-arrow-l',
+  },
+});

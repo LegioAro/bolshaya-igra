@@ -12,6 +12,7 @@
     />
 
     <link rel="stylesheet" href="./css/intlTelInput.css" />
+    <link rel="stylesheet" href="./css/swiper.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Большая игра в ИнфоБизнесе</title>
   </head>
@@ -46,7 +47,7 @@
                 </div>
               </div>
             </div>
-            <div class="cover__img"><img src="./img/cover/img.png" alt="" /></div>
+            <div class="cover__img"><img src="./img/cover/img1.png" alt="" /></div>
           </div>
           <div class="cover__desc">
             <div class="cover__desc-dec"></div>
@@ -72,7 +73,7 @@
             <p>Посмотрите подробное видео</p>
             <div class="video__info-img"><img src="./img/video/info.svg" alt="" /></div>
           </div>
-          <div class="video__img"><img src="./img/video/img.png" alt="" /></div>
+          <div class="video__img"><img src="./img/video/img1.png" alt="" /></div>
           <button class="video__btn btn" data-scroll-smooth="packets">Принять Участие</button>
         </div>
       </div>
@@ -293,8 +294,8 @@
 
               <div class="levels__item-desc">
                 Не важно, как вы пришли на этот уровень: со своим продуктом или помогая и
-                сопровождая других экспертов. <br />
-                Теперь вы можете это повторить и системно расти от запуска к запуску
+                сопровождая других экспертов. Теперь вы можете это повторить и системно расти от
+                запуска к запуску
               </div>
             </div>
           </div>
@@ -596,14 +597,14 @@
               <div class="plan__item-text">дней</div>
             </div>
             <div class="plan__item">
-              <div class="plan__item-num">ххх</div>
+              <div class="plan__item-num">$99700</div>
               <div class="plan__item-text">
                 сделали <br />
                 общий результат
               </div>
             </div>
             <div class="plan__item">
-              <div class="plan__item-num">ххх</div>
+              <div class="plan__item-num">$10000</div>
               <div class="plan__item-text">
                 средний <br />
                 результат участника
@@ -1197,7 +1198,7 @@
       <div class="container">
         <div class="advantages__wrapper">
           <div class="advantages__title title title--uppercase">
-            Все еще Думаете,<br />Принять лиВам Участие?
+            Все еще Думаете,<br />Принять ли Вам Участие?
           </div>
           <div class="advantages__info">
             <div class="advantages__info-img"><img src="./img/advantages/dec.png" alt="" /></div>
@@ -1421,11 +1422,14 @@
             </div>
           </div>
           <div class="why__text">
-            За 12 лет в мире инфобизнеса какие запуски я только не делал <br />
+            За 12 лет в мире инфобизнеса какие запуски я только не делал.
             <span>Но 2 запуска мне запомнились особенно:</span>
           </div>
           <div class="why__info">
-            <div class="why__info-img"><img src="./img/why/1.png" alt="" /></div>
+            <div class="why__info-img">
+              <img class="why__info-img-border" src="./img/why/1-1.png" alt="" />
+              <!-- <img class="why__info-img-gif" src="./img/why/GIF.gif" alt="" /> -->
+            </div>
             <div class="why__info-content">
               <div class="why__info-title">Большая игра в МЛМ</div>
               <div class="why__info-items">
@@ -1465,7 +1469,64 @@
                 </div>
               </div>
             </div>
-            <div class="why__info-img"><img src="./img/why/2.png" alt="" /></div>
+            <div class="why__slider-wrapper">
+              <div class="why__slider">
+                <div class="swiper-wrapper">
+                  <div class="why__slider-item swiper-slide">
+                    <img src="./img/why/slider/1.png" alt="" />
+                  </div>
+                  <div class="why__slider-item swiper-slide">
+                    <img src="./img/why/slider/2.png" alt="" />
+                  </div>
+                  <div class="why__slider-item swiper-slide">
+                    <img src="./img/why/slider/3.png" alt="" />
+                  </div>
+                  <div class="why__slider-item swiper-slide">
+                    <img src="./img/why/slider/4.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="why__slider-arrows">
+                <button class="why__slider-arrow why__slider-arrow-l">
+                  <svg
+                    width="62"
+                    height="63"
+                    viewBox="0 0 62 63"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="31"
+                      cy="31.8223"
+                      r="30.5"
+                      transform="rotate(-180 31 31.8223)"
+                      stroke="white"
+                    />
+                    <path
+                      d="M33.5 38.8223L26.5 31.8223L33.5 24.8223"
+                      stroke="white"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+                <button class="why__slider-arrow why__slider-arrow-r">
+                  <svg
+                    width="62"
+                    height="63"
+                    viewBox="0 0 62 63"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="31" cy="31.8223" r="30.5" stroke="white" />
+                    <path
+                      d="M28.5 24.8223L35.5 31.8223L28.5 38.8223"
+                      stroke="white"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1536,7 +1597,18 @@
               Посмотрите,<br />
               как это было:
             </div>
-            <div class="program__video"><img src="./img/program/video.png" alt="" /></div>
+            <div class="program__video">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/-CTlz5PJRZs?si=T4CLNC2OnoSVheWS&amp;controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
           <div class="program__result">
             <div class="program__result-dec program__result-dec--1">
@@ -1546,8 +1618,8 @@
               <img src="./img/program/result/dec2.png" alt="" />
             </div>
             <div class="program__result-title">
-              По итогу <span>5-ти дней</span> реалити, ребята в общем заработали <span>XXX</span>,
-              где в среднем на человека результат вышел <span>XXX</span>
+              По итогу <span>5-ти дней</span> реалити, ребята в общем заработали
+              <span>$99700</span>, где в среднем на человека результат вышел <span>$10000</span>
             </div>
             <div class="program__result-text">
               А это как вы понимаете только первый уровень программы “Большая игра в Инфобизнесе”
@@ -1685,6 +1757,7 @@
     <script src="./js/intlTelInput.js"></script>
     <script src="./js/utils.js"></script>
     <script src="./js/form-validation.js"></script>
+    <script src="./js/swiper.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

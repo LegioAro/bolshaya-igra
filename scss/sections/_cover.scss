@@ -93,7 +93,7 @@
     p {
       color: rgb(255, 255, 255);
       font-family: var(--font-text-3);
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 400;
       line-height: 100%;
       letter-spacing: 0%;
@@ -147,7 +147,7 @@
       position: relative;
       z-index: 1;
       width: 100%;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600;
       line-height: 145%;
       letter-spacing: 0%;
@@ -305,7 +305,7 @@
       }
     }
     &__suptitle {
-      font-size: 16px;
+      font-size: 18px;
     }
     &__text {
       font-size: 18px;
@@ -321,10 +321,10 @@
       }
     }
     &__suptitle {
-      font-size: 14px;
+      font-size: 18px;
     }
     &__text {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 }
