@@ -216,5 +216,9 @@
     &__item-text {
       text-align: left;
     }
+    &__items-line {
+      left: 4px;
+      transform: translateX(0%);
+    }
   }
 }
