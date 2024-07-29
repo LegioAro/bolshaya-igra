@@ -54,5 +54,11 @@
       background-repeat: no-repeat;
       background-size: contain;
     }
+
+    &--2 {
+      &::before {
+        background-image: url(../img/icons/check-3.svg);
+      }
+    }
   }
 }

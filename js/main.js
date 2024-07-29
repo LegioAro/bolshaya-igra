@@ -164,3 +164,68 @@ const swiper = new Swiper('.why__slider', {
     prevEl: '.why__slider-arrow-l',
   },
 });
+
+const swiper2 = new Swiper('.program__video-slider', {
+  slidesPerView: 5,
+  spaceBetween: 30,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1.5,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    550: {
+      slidesPerView: 2.3,
+    },
+    650: {
+      slidesPerView: 2.5,
+    },
+    768: {
+      slidesPerView: 3.5,
+    },
+    900: {
+      slidesPerView: 4,
+    },
+    1350: {
+      slidesPerView: 5,
+    },
+  },
+
+  navigation: {
+    nextEl: '.program__slider-arrow-r',
+    prevEl: '.program__slider-arrow-l',
+  },
+});
+
+//
+const divs = document.querySelectorAll('.actions__item');
+
+function checkDivVisibility() {
+  divs.forEach((div, index) => {
+    const rect = div.getBoundingClientRect();
+    if (rect.top <= 80 && rect.bottom >= 0) {
+      divs.forEach((div) => div.classList.remove('active'));
+      divs[index].classList.add('active');
+    }
+  });
+}
+
+document.addEventListener('scroll', checkDivVisibility);
+
+//resize
+isResize('.about__info-img', '.about__info', '.about__mob', 768);
+isResize('.why__info-img', '.why__info', '.why__info .why__info-mob', 650, 'first');
+isResize('.why__slider-wrapper', '.why__info-2', '.why__info-2 .why__info-mob', 1100);
+
+window.addEventListener('resize', () => {
+  isResize('.about__info-img', '.about__info', '.about__mob', 768);
+  isResize('.why__info-img', '.why__info', '.why__info .why__info-mob', 650, 'first');
+  isResize('.why__slider-wrapper', '.why__info-2', '.why__info-2 .why__info-mob', 1100);
+});
+
+//
+Fancybox.bind('[data-fancybox]', {
+  // Your custom options
+});

@@ -11,6 +11,11 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
     <link rel="stylesheet" href="./css/intlTelInput.css" />
     <link rel="stylesheet" href="./css/swiper.css" />
     <link rel="stylesheet" href="./css/styles.css" />
@@ -484,7 +489,7 @@
                     В хорошо известном мессенджере Телеграм, мы создадим общий чат всех участников
                     нашего потока вместе со мной
                   </p>
-                  <div class="content__desc">
+                  <div class="content__desc content__desc--2">
                     Я считаю, это будет еще одно отличное решение вас поддержать и непосредственно
                     влиять на ваш результат
                   </div>
@@ -643,42 +648,42 @@
           <div class="moduls__text">Вы неизбежно сделаете следующее:</div>
           <div class="moduls__tabs">
             <div class="moduls__tabs-btns">
-              <button class="moduls__tabs-btn" data-tab-btn="modul-1">
+              <button class="moduls__tabs-btn" data-tab-btn="modul-1" data-scroll-smooth="moduls">
                 <div class="moduls__tabs-btn-num">01</div>
                 <div class="moduls__tabs-btn-info">
                   <div class="moduls__tabs-btn-title">Модуль №1</div>
                   <div class="moduls__tabs-btn-text">Быстрые Деньги (Быстрый Результат)</div>
                 </div>
               </button>
-              <button class="moduls__tabs-btn" data-tab-btn="modul-2">
+              <button class="moduls__tabs-btn" data-tab-btn="modul-2" data-scroll-smooth="moduls">
                 <div class="moduls__tabs-btn-num">02</div>
                 <div class="moduls__tabs-btn-info">
                   <div class="moduls__tabs-btn-title">Модуль №2</div>
                   <div class="moduls__tabs-btn-text">Продвижение своего Media в Интернете</div>
                 </div>
               </button>
-              <button class="moduls__tabs-btn" data-tab-btn="modul-3">
+              <button class="moduls__tabs-btn" data-tab-btn="modul-3" data-scroll-smooth="moduls">
                 <div class="moduls__tabs-btn-num">03</div>
                 <div class="moduls__tabs-btn-info">
                   <div class="moduls__tabs-btn-title">Модуль №3</div>
                   <div class="moduls__tabs-btn-text">Продажи на 1 000 000 $$$</div>
                 </div>
               </button>
-              <button class="moduls__tabs-btn" data-tab-btn="modul-4">
+              <button class="moduls__tabs-btn" data-tab-btn="modul-4" data-scroll-smooth="moduls">
                 <div class="moduls__tabs-btn-num">04</div>
                 <div class="moduls__tabs-btn-info">
                   <div class="moduls__tabs-btn-title">Модуль №4</div>
                   <div class="moduls__tabs-btn-text">Трафик</div>
                 </div>
               </button>
-              <button class="moduls__tabs-btn" data-tab-btn="modul-5">
+              <button class="moduls__tabs-btn" data-tab-btn="modul-5" data-scroll-smooth="moduls">
                 <div class="moduls__tabs-btn-num">05</div>
                 <div class="moduls__tabs-btn-info">
                   <div class="moduls__tabs-btn-title">Модуль №5</div>
                   <div class="moduls__tabs-btn-text">Продукт</div>
                 </div>
               </button>
-              <button class="moduls__tabs-btn" data-tab-btn="modul-6">
+              <button class="moduls__tabs-btn" data-tab-btn="modul-6" data-scroll-smooth="moduls">
                 <div class="moduls__tabs-btn-num">06</div>
                 <div class="moduls__tabs-btn-info">
                   <div class="moduls__tabs-btn-title">Модуль №6</div>
@@ -686,7 +691,7 @@
                 </div>
               </button>
             </div>
-            <div class="moduls__tabs-contents">
+            <div class="moduls__tabs-contents" id="moduls">
               <div class="moduls__tabs-content" data-tab-content="modul-1">
                 <div class="moduls__tabs-content-item">
                   <div class="moduls__tabs-content-title">Главная Задача Модуля</div>
@@ -1067,6 +1072,9 @@
           </div>
           <div class="packets__items">
             <div class="packets__item">
+              <div class="packets__item-discount discount">
+                <p>-50%</p>
+              </div>
               <div class="packets__item-title">
                 <div class="packets__item-title-img">
                   <img src="./img/packets/1.png" alt="" />
@@ -1083,6 +1091,7 @@
                 <li>Доступ к курсу — 6 месяцев после его окончания</li>
                 <li>Сертификат о прохождении курса</li>
                 <li class="disabled">Разборы с Артемом Нестеренко</li>
+                <li class="disabled">Суммарная ценность: 7700$</li>
                 <li class="disabled">Участие в командах (десятках)</li>
               </ul>
               <div class="packets__item-info">
@@ -1097,6 +1106,9 @@
               </div>
             </div>
             <div class="packets__item">
+              <div class="packets__item-discount discount">
+                <p>-50%</p>
+              </div>
               <div class="packets__item-title">
                 <div class="packets__item-title-img">
                   <img src="./img/packets/2.png" alt="" />
@@ -1113,6 +1125,7 @@
                 <li>Доступ к курсу — 6 месяцев после его окончания</li>
                 <li>Сертификат о прохождении курса</li>
                 <li>Разборы с Артемом Нестеренко</li>
+                <li>Суммарная ценность: 17 100 $$</li>
                 <li>Участие в командах (десятках)</li>
               </ul>
               <div class="packets__item-info">
@@ -1139,53 +1152,56 @@
           <div class="actions__subtitle">
             Ваши действия в программе будут выглядеть примерно так:
           </div>
-          <div class="actions__items">
-            <div class="actions__item active">
-              <div class="actions__item-content">
-                <div class="actions__item-icon"><img src="./img/actions/1.svg" alt="" /></div>
-                <div class="actions__item-text">
-                  Я даю вам на первом уровен технологию и все вспомогательные материалы
+          <div class="actions__items-block">
+            <div class="actions__items-line"></div>
+            <div class="actions__items">
+              <div class="actions__item active">
+                <div class="actions__item-content">
+                  <div class="actions__item-icon"></div>
+                  <div class="actions__item-text">
+                    Я даю вам на первом уровен технологию и все вспомогательные материалы
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="actions__item">
-              <div class="actions__item-content">
-                <div class="actions__item-icon"><img src="./img/actions/2.svg" alt="" /></div>
-                <div class="actions__item-text">
-                  Вы их внедряете и делаете первые 10 000 $ с теми ресурсами, что у вас уже есть
+              <div class="actions__item">
+                <div class="actions__item-content">
+                  <div class="actions__item-icon"></div>
+                  <div class="actions__item-text">
+                    Вы их внедряете и делаете первые 10 000 $ с теми ресурсами, что у вас уже есть
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="actions__item">
-              <div class="actions__item-content">
-                <div class="actions__item-icon"><img src="./img/actions/3.svg" alt="" /></div>
-                <div class="actions__item-text">
-                  На втором уровне набираете аудиторию, создаете или докручиваете продукт
+              <div class="actions__item">
+                <div class="actions__item-content">
+                  <div class="actions__item-icon"></div>
+                  <div class="actions__item-text">
+                    На втором уровне набираете аудиторию, создаете или докручиваете продукт
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="actions__item">
-              <div class="actions__item-content">
-                <div class="actions__item-icon"><img src="./img/actions/4.svg" alt="" /></div>
-                <div class="actions__item-text">
-                  Прогреваете аудиторию, делаете небольшой запуск и зарабатываете 20 - 50 000 $
+              <div class="actions__item">
+                <div class="actions__item-content">
+                  <div class="actions__item-icon"></div>
+                  <div class="actions__item-text">
+                    Прогреваете аудиторию, делаете небольшой запуск и зарабатываете 20 - 50 000 $
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="actions__item">
-              <div class="actions__item-content">
-                <div class="actions__item-icon"><img src="./img/actions/5.svg" alt="" /></div>
-                <div class="actions__item-text">
-                  На третьем уровне ставите процесс набора аудитории и прогрева на поток
+              <div class="actions__item">
+                <div class="actions__item-content">
+                  <div class="actions__item-icon"></div>
+                  <div class="actions__item-text">
+                    На третьем уровне ставите процесс набора аудитории и прогрева на поток
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="actions__item">
-              <div class="actions__item-content">
-                <div class="actions__item-icon"><img src="./img/actions/6.svg" alt="" /></div>
-                <div class="actions__item-text">
-                  Делегируете большинство задач, делаете массовый запуск и заработаете кратно
-                  больше, 100 000 $$$ +
+              <div class="actions__item">
+                <div class="actions__item-content">
+                  <div class="actions__item-icon"></div>
+                  <div class="actions__item-text">
+                    Делегируете большинство задач, делаете массовый запуск и заработаете кратно
+                    больше, 100 000 $$$ +
+                  </div>
                 </div>
               </div>
             </div>
@@ -1209,136 +1225,161 @@
             </div>
           </div>
           <div class="advantages__items">
-            <div class="advantages__item">
-              <div class="advantages__item-dec">
+            <div class="advantages__item-block">
+              <div class="advantages__item-discount discount discount--fz-20">
+                <p>
+                  Ценность <br />
+                  597$
+                </p>
+              </div>
+              <div class="advantages__item">
+                <!-- <div class="advantages__item-dec">
                 <img src="./img/advantages/sel/1.png" alt="" />
-              </div>
-              <div class="advantages__item-title-block">
-                <div class="advantages__item-img">
-                  <img src="./img/advantages/1.png" alt="" />
+              </div> -->
+
+                <div class="advantages__item-title-block">
+                  <div class="advantages__item-img">
+                    <img src="./img/advantages/1.png" alt="" />
+                  </div>
+                  <div class="advantages__item-title">
+                    <span>90 дней</span> уникальной поддержки и контакт со мной и нашей командой на
+                    время тренинга
+                  </div>
                 </div>
-                <div class="advantages__item-title">
-                  <span>90 дней</span> уникальной поддержки и контакт со мной и нашей командой на
-                  время тренинга
+                <div class="advantages__item-text">
+                  <p>
+                    <b>Моя команда будет в полную силу помогать Вам создавать успешный бизнес.</b>
+                  </p>
+                  <p>
+                    Наша команда - это концентрация людей, обладающих феноменальными способностями и
+                    умениями в своих направлениях.
+                    <b class="--select"
+                      >Впервые они будут оказывать Вам поддержку на протяжении 90 дней</b
+                    >
+                  </p>
+                  <div class="advantages__item-text-desc">
+                    У Вас есть вопросы по работе с клиентами, съемками видео, работе с сайтами или
+                    чем-либо другим? - Вы получите ответы на них от лучших из лучших в своем
+                    направлении.
+                  </div>
+                  <p>
+                    Кроме того, Вы также получаете рекомендации и помощь от всех участников
+                    программы и от меня лично.
+                  </p>
                 </div>
-              </div>
-              <div class="advantages__item-text">
-                <p>
-                  <b>Моя команда будет в полную силу помогать Вам создавать успешный бизнес.</b>
-                </p>
-                <p>
-                  Наша команда - это концентрация людей, обладающих феноменальными способностями и
-                  умениями в своих направлениях.
-                  <b class="--select"
-                    >Впервые они будут оказывать Вам поддержку на протяжении 90 дней</b
-                  >
-                </p>
-                <div class="advantages__item-text-desc">
-                  У Вас есть вопросы по работе с клиентами, съемками видео, работе с сайтами или
-                  чем-либо другим? - Вы получите ответы на них от лучших из лучших в своем
-                  направлении.
-                </div>
-                <p>
-                  Кроме того, Вы также получаете рекомендации и помощь от всех участников программы
-                  и от меня лично.
-                </p>
               </div>
             </div>
-            <div class="advantages__item">
-              <div class="advantages__item-dec">
-                <img src="./img/advantages/sel/2.png" alt="" />
+            <div class="advantages__item-block">
+              <div class="advantages__item-discount discount discount--fz-20">
+                <p>
+                  Ценность <br />
+                  2 500 $
+                </p>
               </div>
-              <div class="advantages__item-title-block">
-                <div class="advantages__item-img">
-                  <img src="./img/advantages/2.png" alt="" />
+              <div class="advantages__item">
+                <div class="advantages__item-title-block">
+                  <div class="advantages__item-img">
+                    <img src="./img/advantages/2.png" alt="" />
+                  </div>
+                  <div class="advantages__item-title">
+                    Выступления <br />
+                    приглашенных <span>экспертов</span>
+                  </div>
+                  <div class="advantages__item-title-text">+ опыт экспертов (30 лет в сумме)</div>
                 </div>
-                <div class="advantages__item-title">
-                  Выступления <br />
-                  приглашенных <span>экспертов</span>
+                <div class="advantages__item-text">
+                  <p>
+                    Я сам лично знаю более десятка, если не сотен разных связок, продуктов, техник
+                    продаж и они все очень гибкие и могут сильно переплетаться друг с другом
+                  </p>
+                  <p>
+                    <b
+                      >Поэтому я решил пригласить выступить ребят, которые сейчас,
+                      <b class="--select">на конкретных связках</b>, делают
+                      <b class="--select">сотни тысяч долларов продаж.</b></b
+                    >
+                  </p>
+                  <p>
+                    Чтобы вы взяли именно то, что ближе всего вам и смогли максимально
+                    масштабироваться в своем бизнесе!
+                  </p>
                 </div>
-                <div class="advantages__item-title-text">+ опыт экспертов (30 лет в сумме)</div>
-              </div>
-              <div class="advantages__item-text">
-                <p>
-                  Я сам лично знаю более десятка, если не сотен разных связок, продуктов, техник
-                  продаж и они все очень гибкие и могут сильно переплетаться друг с другом
-                </p>
-                <p>
-                  <b
-                    >Поэтому я решил пригласить выступить ребят, которые сейчас,
-                    <b class="--select">на конкретных связках</b>, делают
-                    <b class="--select">сотни тысяч долларов продаж.</b></b
-                  >
-                </p>
-                <p>
-                  Чтобы вы взяли именно то, что ближе всего вам и смогли максимально
-                  масштабироваться в своем бизнесе!
-                </p>
               </div>
             </div>
-            <div class="advantages__item">
-              <div class="advantages__item-dec">
-                <img src="./img/advantages/sel/3.png" alt="" />
+            <div class="advantages__item-block">
+              <div class="advantages__item-discount discount discount--fz-20">
+                <p>
+                  Ценность <br />
+                  1 500 $
+                </p>
               </div>
-              <div class="advantages__item-title-block">
-                <div class="advantages__item-img">
-                  <img src="./img/advantages/3.png" alt="" />
+              <div class="advantages__item">
+                <div class="advantages__item-title-block">
+                  <div class="advantages__item-img">
+                    <img src="./img/advantages/3.png" alt="" />
+                  </div>
+                  <div class="advantages__item-title"><span>Бонусный</span> модуль</div>
                 </div>
-                <div class="advantages__item-title"><span>Бонусный</span> модуль</div>
-              </div>
-              <div class="advantages__item-text">
-                <p>
-                  Как не крути но в <b class="--select">инфобизнесе есть база</b>, которая в любом
-                  случае вас сильно усилит
-                </p>
-                <p>
-                  С одной стороны, это вещи, которые связаны с человеческой психологией и поэтому
-                  всегда будут работать в маркетинге, прогревах и продажахё
-                </p>
-                <p>
-                  А с другой стороны такие базовые занятия, как распаковка личности и экспертности.
-                </p>
-                <p>
-                  <b class="--select">Как выявлять боли и потребности своей аудитории.</b> Как
-                  выстраивать методологию продуктов и еще ряд обязательных занятий к изучению
-                </p>
+                <div class="advantages__item-text">
+                  <p>
+                    Как не крути но в <b class="--select">инфобизнесе есть база</b>, которая в любом
+                    случае вас сильно усилит
+                  </p>
+                  <p>
+                    С одной стороны, это вещи, которые связаны с человеческой психологией и поэтому
+                    всегда будут работать в маркетинге, прогревах и продажахё
+                  </p>
+                  <p>
+                    А с другой стороны такие базовые занятия, как распаковка личности и
+                    экспертности.
+                  </p>
+                  <p>
+                    <b class="--select">Как выявлять боли и потребности своей аудитории.</b> Как
+                    выстраивать методологию продуктов и еще ряд обязательных занятий к изучению
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="advantages__item">
-              <div class="advantages__item-dec">
-                <img src="./img/advantages/sel/4.png" alt="" />
-              </div>
-              <div class="advantages__item-title-block">
-                <div class="advantages__item-img">
-                  <img src="./img/advantages/4.png" alt="" />
-                </div>
-                <div class="advantages__item-title">Формула <span>Личного Бренда</span></div>
-              </div>
-              <div class="advantages__item-text">
+            <div class="advantages__item-block">
+              <div class="advantages__item-discount discount discount--fz-20">
                 <p>
-                  <b
-                    >Моя одна из последних программ <br />
-                    в 5 модулях на которой мы с вами подробно <br />
-                    разберем следующее:</b
-                  >
+                  Ценность <br />
+                  700 $
                 </p>
-                <div class="advantages__item-lists">
-                  <ul>
-                    <li>Лаборатория личного бренда</li>
-                    <li>Легенда личного бренда</li>
-                    <li>Ролевая модель</li>
-                    <li>Ваша Большая Идея</li>
-                    <li>Способы коммуникации</li>
-                    <li>Упаковка Личного бренда</li>
-                    <li>Подача контента</li>
-                  </ul>
-                  <ul>
-                    <li>Создание авторской методики</li>
-                    <li>Маркетинг Личного бренда</li>
-                    <li>Монетизация бренда</li>
-                    <li>Карта Успеха Личного бренда</li>
-                    <li>Медийная стратегия</li>
-                  </ul>
+              </div>
+              <div class="advantages__item">
+                <div class="advantages__item-title-block">
+                  <div class="advantages__item-img">
+                    <img src="./img/advantages/4.png" alt="" />
+                  </div>
+                  <div class="advantages__item-title">Формула <span>Личного Бренда</span></div>
+                </div>
+                <div class="advantages__item-text">
+                  <p>
+                    <b
+                      >Моя одна из последних программ <br />
+                      в 5 модулях на которой мы с вами подробно <br />
+                      разберем следующее:</b
+                    >
+                  </p>
+                  <div class="advantages__item-lists">
+                    <ul>
+                      <li>Лаборатория личного бренда</li>
+                      <li>Легенда личного бренда</li>
+                      <li>Ролевая модель</li>
+                      <li>Ваша Большая Идея</li>
+                      <li>Способы коммуникации</li>
+                      <li>Упаковка Личного бренда</li>
+                      <li>Подача контента</li>
+                    </ul>
+                    <ul>
+                      <li>Создание авторской методики</li>
+                      <li>Маркетинг Личного бренда</li>
+                      <li>Монетизация бренда</li>
+                      <li>Карта Успеха Личного бренда</li>
+                      <li>Медийная стратегия</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1358,6 +1399,7 @@
               Артем <br />
               Нестеренко
             </div>
+            <div class="about__mob"></div>
             <div class="about__text">
               Основатель образовательной системы и главный учитель 90-то дневной программы “Большая
               игра в ИнфоБизнесе”
@@ -1432,22 +1474,27 @@
             </div>
             <div class="why__info-content">
               <div class="why__info-title">Большая игра в МЛМ</div>
+              <div class="why__info-mob"></div>
               <div class="why__info-items">
                 <div class="why__info-item">
                   <div class="why__info-item-title">Старт:</div>
                   <div class="why__info-item-num">2018</div>
                 </div>
                 <div class="why__info-item">
-                  <div class="why__info-item-title">Учениковт:</div>
-                  <div class="why__info-item-num">10 000</div>
+                  <div class="why__info-item-title">Продажи порядка:</div>
+                  <div class="why__info-item-num">3&nbsp;000&nbsp;000&nbsp;$$$</div>
                 </div>
                 <div class="why__info-item">
                   <div class="why__info-item-title">Потоков программы:</div>
                   <div class="why__info-item-num">19</div>
                 </div>
                 <div class="why__info-item">
-                  <div class="why__info-item-title">Продажи порядка:</div>
-                  <div class="why__info-item-num">3&nbsp;000&nbsp;000&nbsp;$$$</div>
+                  <div class="why__info-item-title">Сотни восторженных отзывов в Инстаграма:</div>
+                  <div class="why__info-item-num">@big_game_in_mlm</div>
+                </div>
+                <div class="why__info-item">
+                  <div class="why__info-item-title">Учеников:</div>
+                  <div class="why__info-item-num">10&nbsp;000</div>
                 </div>
               </div>
             </div>
@@ -1458,14 +1505,21 @@
                 ОПГ. Особая <br />
                 Премиальная группа
               </div>
+              <div class="why__info-mob"></div>
               <div class="why__info-items">
-                <div class="why__info-item">
-                  <div class="why__info-item-title">Старт:</div>
-                  <div class="why__info-item-num">2021</div>
-                </div>
                 <div class="why__info-item">
                   <div class="why__info-item-title">Запуск:</div>
                   <div class="why__info-item-num">1&nbsp;000&nbsp;000&nbsp;$$$</div>
+                </div>
+                <div class="why__info-item">
+                  <div class="why__info-item-title">Старт:</div>
+                  <div class="why__info-item-num">
+                    2021
+                    <span
+                      >Годовая премиальная <br />
+                      программа</span
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -1593,21 +1647,93 @@
             </div>
           </div>
           <div class="program__video-block">
-            <div class="program__video-title">
-              Посмотрите,<br />
-              как это было:
+            <div class="program__video-title">Посмотрите, как это было:</div>
+            <div class="program__video-slider">
+              <div class="swiper-wrapper">
+                <a
+                  href="./videos/1.MP4"
+                  data-fancybox="videos"
+                  class="program__video-item swiper-slide"
+                >
+                  <img src="./img/program/videos/1.png" alt="" />
+                </a>
+                <a
+                  href="./videos/2.MP4"
+                  data-fancybox="videos"
+                  class="program__video-item swiper-slide"
+                  ><img src="./img/program/videos/2.png" alt=""
+                /></a>
+                <a
+                  href="./videos/3.MP4"
+                  data-fancybox="videos"
+                  class="program__video-item swiper-slide"
+                  ><img src="./img/program/videos/3.png" alt=""
+                /></a>
+                <a
+                  href="./videos/4.MP4"
+                  data-fancybox="videos"
+                  class="program__video-item swiper-slide"
+                  ><img src="./img/program/videos/4.png" alt=""
+                /></a>
+                <a
+                  href="./videos/5.MP4"
+                  data-fancybox="videos"
+                  class="program__video-item swiper-slide"
+                  ><img src="./img/program/videos/5.png" alt=""
+                /></a>
+                <a
+                  href="./videos/6.MP4"
+                  data-fancybox="videos"
+                  class="program__video-item swiper-slide"
+                  ><img src="./img/program/videos/6.png" alt=""
+                /></a>
+                <a
+                  href="./videos/7.MP4"
+                  data-fancybox="videos"
+                  class="program__video-item swiper-slide"
+                  ><img src="./img/program/videos/7.png" alt=""
+                /></a>
+              </div>
             </div>
-            <div class="program__video">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/ojfmkzXmOog?si=xfhgKIhyPTKmESDd&amp;controls=0"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
+            <div class="program__slider-arrows">
+              <button class="program__slider-arrow program__slider-arrow-l">
+                <svg
+                  width="62"
+                  height="63"
+                  viewBox="0 0 62 63"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="31"
+                    cy="31.8223"
+                    r="30.5"
+                    transform="rotate(-180 31 31.8223)"
+                    stroke="white"
+                  />
+                  <path
+                    d="M33.5 38.8223L26.5 31.8223L33.5 24.8223"
+                    stroke="white"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+              <button class="program__slider-arrow program__slider-arrow-r">
+                <svg
+                  width="62"
+                  height="63"
+                  viewBox="0 0 62 63"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="31" cy="31.8223" r="30.5" stroke="white" />
+                  <path
+                    d="M28.5 24.8223L35.5 31.8223L28.5 38.8223"
+                    stroke="white"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
           <div class="program__result">
@@ -1754,9 +1880,12 @@
       </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="./js/intlTelInput.js"></script>
     <script src="./js/utils.js"></script>
     <script src="./js/form-validation.js"></script>
+    <script src="./js/resize.js"></script>
     <script src="./js/swiper.js"></script>
     <script src="./js/main.js"></script>
   </body>

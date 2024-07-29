@@ -46,7 +46,17 @@
     max-width: 980px;
     margin: 0 auto 100px;
   }
-
+  &__item-block {
+    margin-bottom: 90px;
+    position: relative;
+  }
+  &__item-discount {
+    position: absolute;
+    z-index: 1;
+    top: -26px;
+    right: -66px;
+    transform: rotate(21.4deg);
+  }
   &__item {
     padding: 40px;
     border-radius: 11.63px;
@@ -55,7 +65,7 @@
     grid-column-gap: 43px;
     grid-row-gap: 30px;
     position: relative;
-    margin-bottom: 90px;
+
     background: linear-gradient(
       42deg,
       rgba(255, 255, 255, 0.2) 0%,
@@ -197,8 +207,9 @@
 @media (max-width: 1200px) {
   .advantages {
     margin-bottom: 200px;
-    &__item-dec {
-      top: -70px;
+
+    &__item-discount {
+      top: -30px;
       right: -10px;
       transform: rotate(-10deg);
     }
