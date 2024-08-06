@@ -53,14 +53,17 @@
     width: 100%;
     max-width: 974px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(370px, 440px));
     grid-column-gap: 68px;
+    justify-content: center;
   }
 
   &__item {
     padding: 58px 52px 50px;
     border-radius: 11.63px;
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     background: linear-gradient(
       42deg,
@@ -139,6 +142,7 @@
 
   &__item-info {
     position: relative;
+    margin: auto 0 0;
   }
 
   &__item-info-text {

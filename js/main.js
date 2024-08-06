@@ -29,7 +29,7 @@ isTabs();
 
 function isTimer() {
   // let dateNow = new Date();
-  let minutesDeadline = new Date(2024, 6, 30, 20);
+  let minutesDeadline = new Date(2024, 6, 30, 15);
 
   // dateNow.setMinutes(dateNow.getMinutes() + minutesDeadline);
 
@@ -155,6 +155,8 @@ for (let elem of scrollSmoothLinck) {
   });
 }
 
+//sliders
+
 const swiper = new Swiper('.why__slider', {
   slidesPerView: 1,
   spaceBetween: 10,
@@ -205,7 +207,8 @@ const divs = document.querySelectorAll('.actions__item');
 function checkDivVisibility() {
   divs.forEach((div, index) => {
     const rect = div.getBoundingClientRect();
-    if (rect.top <= 80 && rect.bottom >= 0) {
+    const halfHeight = window.innerHeight / 2;
+    if (rect.top <= halfHeight && rect.bottom >= 0) {
       divs.forEach((div) => div.classList.remove('active'));
       divs[index].classList.add('active');
     }
@@ -217,12 +220,12 @@ document.addEventListener('scroll', checkDivVisibility);
 //resize
 isResize('.about__info-img', '.about__info', '.about__mob', 768);
 isResize('.why__info-img', '.why__info', '.why__info .why__info-mob', 650, 'first');
-isResize('.why__slider-wrapper', '.why__info-2', '.why__info-2 .why__info-mob', 1100);
+isResize('.why__slider-wrapper', '.why__info-2', '.why__info-2 .why__info-mob', 768);
 
 window.addEventListener('resize', () => {
   isResize('.about__info-img', '.about__info', '.about__mob', 768);
   isResize('.why__info-img', '.why__info', '.why__info .why__info-mob', 650, 'first');
-  isResize('.why__slider-wrapper', '.why__info-2', '.why__info-2 .why__info-mob', 1100);
+  isResize('.why__slider-wrapper', '.why__info-2', '.why__info-2 .why__info-mob', 768);
 });
 
 //
