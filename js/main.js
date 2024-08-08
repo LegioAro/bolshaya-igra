@@ -10,13 +10,33 @@ function isTabs(activeContent = 'active', activeBtn = 'active', currentBtn = 0) 
         const attrContents = document.querySelectorAll(`[data-tab-content=${btnData}]`);
 
         if (attrContents.length > 0) {
-          btns.forEach((elem) => elem.classList.remove(activeBtn));
-          contents.forEach((elem) => elem.classList.remove(activeContent));
+          if (document.documentElement.clientWidth <= 768) {
+            if (btn.classList.contains(activeBtn)) {
+              btns.forEach((elem) => elem.classList.remove(activeBtn));
+              contents.forEach((elem) => elem.classList.remove(activeContent));
+            } else {
+              btns.forEach((elem) => elem.classList.remove(activeBtn));
+              contents.forEach((elem) => elem.classList.remove(activeContent));
 
-          btn.classList.add(activeBtn);
-          attrContents.forEach((item) => item.classList.add(activeContent));
+              btn.classList.add(activeBtn);
+              attrContents.forEach((item) => item.classList.add(activeContent));
+            }
+          } else {
+            btns.forEach((elem) => elem.classList.remove(activeBtn));
+            contents.forEach((elem) => elem.classList.remove(activeContent));
+
+            btn.classList.add(activeBtn);
+            attrContents.forEach((item) => item.classList.add(activeContent));
+          }
         }
       });
+    });
+  }
+
+  if (document.documentElement.clientWidth <= 768) {
+    btns.forEach((btn) => {
+      const btnId = btn.getAttribute('id');
+      btn.setAttribute('data-scroll-smooth', btnId);
     });
   }
 
@@ -24,6 +44,24 @@ function isTabs(activeContent = 'active', activeBtn = 'active', currentBtn = 0) 
 }
 
 isTabs();
+
+//smooth
+
+const scrollSmoothLinck = document.querySelectorAll('*[data-scroll-smooth]');
+
+for (let elem of scrollSmoothLinck) {
+  elem.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    let blockID = elem.getAttribute('data-scroll-smooth');
+    let top = document.getElementById(blockID).getBoundingClientRect().top;
+
+    document.querySelector('html,body').scrollTo({
+      top: top + window.pageYOffset - 50,
+      behavior: 'smooth',
+    });
+  });
+}
 
 //timer
 
@@ -137,24 +175,6 @@ function isModalClose() {
 }
 isModalClose();
 
-//smooth
-
-const scrollSmoothLinck = document.querySelectorAll('*[data-scroll-smooth]');
-
-for (let elem of scrollSmoothLinck) {
-  elem.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    let blockID = elem.getAttribute('data-scroll-smooth');
-    let top = document.getElementById(blockID).getBoundingClientRect().top;
-
-    document.querySelector('html,body').scrollTo({
-      top: top + window.pageYOffset - 30,
-      behavior: 'smooth',
-    });
-  });
-}
-
 //sliders
 
 const swiper = new Swiper('.why__slider', {
@@ -173,21 +193,9 @@ const swiper2 = new Swiper('.program__video-slider', {
 
   breakpoints: {
     320: {
-      slidesPerView: 1.5,
-    },
-    500: {
-      slidesPerView: 2,
-    },
-    550: {
-      slidesPerView: 2.3,
-    },
-    650: {
-      slidesPerView: 2.5,
+      slidesPerView: 1,
     },
     768: {
-      slidesPerView: 3.5,
-    },
-    900: {
       slidesPerView: 4,
     },
     1350: {
@@ -221,11 +229,28 @@ document.addEventListener('scroll', checkDivVisibility);
 isResize('.about__info-img', '.about__info', '.about__mob', 768);
 isResize('.why__info-img', '.why__info', '.why__info .why__info-mob', 650, 'first');
 isResize('.why__slider-wrapper', '.why__info-2', '.why__info-2 .why__info-mob', 768);
+isResize('.block__img-3', '.block-3 .block__item', 'block-3 .block-3__mob', 700);
+
+function modulMobContent() {
+  const btns = document.querySelectorAll('.moduls__tabs-btn-wrapper');
+  const contents = document.querySelectorAll('.moduls__tabs-content');
+  const parentBlock = document.querySelector('.moduls__tabs-contents');
+
+  contents.forEach((item, i) => {
+    if (document.documentElement.clientWidth <= 768) {
+      btns[i].append(item);
+    } else {
+      parentBlock.append(item);
+    }
+  });
+}
+modulMobContent();
 
 window.addEventListener('resize', () => {
   isResize('.about__info-img', '.about__info', '.about__mob', 768);
   isResize('.why__info-img', '.why__info', '.why__info .why__info-mob', 650, 'first');
   isResize('.why__slider-wrapper', '.why__info-2', '.why__info-2 .why__info-mob', 768);
+  isResize('.block__img-3', '.block-3 .block__item', '.block-3 .block-3__mob', 700);
 });
 
 //

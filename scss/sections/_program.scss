@@ -529,6 +529,13 @@
     &__video {
       --w: 500px;
     }
+    &__video-slider {
+      max-width: 300px;
+      margin: 0 auto 50px;
+    }
+    &__video-item {
+      height: 520px;
+    }
     &__result {
       padding: 54px 20px;
     }

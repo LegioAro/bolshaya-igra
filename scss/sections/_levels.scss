@@ -247,6 +247,9 @@
       }
     }
     &__item-list-elem {
+      br {
+        display: none;
+      }
       &::before {
         top: 3px;
       }
