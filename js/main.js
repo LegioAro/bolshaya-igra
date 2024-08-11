@@ -196,6 +196,9 @@ const swiper2 = new Swiper('.program__video-slider', {
       slidesPerView: 1,
     },
     768: {
+      slidesPerView: 3,
+    },
+    1000: {
       slidesPerView: 4,
     },
     1350: {
