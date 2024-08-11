@@ -255,8 +255,3 @@ window.addEventListener('resize', () => {
   isResize('.why__slider-wrapper', '.why__info-2', '.why__info-2 .why__info-mob', 768);
   isResize('.block__img-3', '.block-3 .block__item', '.block-3 .block-3__mob', 700);
 });
-
-//
-Fancybox.bind('[data-fancybox]', {
-  // Your custom options
-});
